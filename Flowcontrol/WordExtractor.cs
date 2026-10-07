@@ -20,8 +20,8 @@ namespace Flowcontrol
 				}
 			}
 
-			// Split the sentence into individual words using spaces
-			var words = sentence.Split(' ');
+			// Split the sentence into words using spaces and ignore empty entries.
+			var words = sentence.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
 			Console.WriteLine($"\nThe third word is: {words[2]}");
 
