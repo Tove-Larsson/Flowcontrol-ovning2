@@ -22,6 +22,22 @@ namespace Flowcontrol
 			}
 		}
 
+		public static int ValidateNonNegativeInt()
+		{
+			while (true)
+			{
+				string input = Console.ReadLine();
+
+				if (int.TryParse(input, out int result) && result >= 0)
+				{
+					return result;
+				}
+
+				Console.WriteLine($"\nYour age can not be a negative number, please try again.");
+			}
+		}
+
+
 		public static bool HasAtLeastThreeWords(string sentence)
 		{
 			var words = sentence.Split(' ');

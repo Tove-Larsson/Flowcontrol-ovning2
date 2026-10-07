@@ -12,7 +12,7 @@ namespace Flowcontrol
 		{
 			Console.WriteLine("Enter your age:");
 
-			int age = InputHelper.ValidateInputIsInt();
+			int age = InputHelper.ValidateNonNegativeInt();
 
 			if (age < 20)
 			{
@@ -36,14 +36,14 @@ namespace Flowcontrol
 			int totalCost = 0;
 
 			Console.WriteLine("Enter how many you will be: ");
-			int groupSize = InputHelper.ValidateInputIsInt();
+			int groupSize = InputHelper.ValidateNonNegativeInt();
 			Console.WriteLine("\nPlease enter the age of every person in the group: ");
 
 			// Loop through the group and calculate the price for each person.
 			for (int i = 0; i < groupSize; i++)
 			{
 				Console.WriteLine("Enter age:");
-				int age = InputHelper.ValidateInputIsInt();
+				int age = InputHelper.ValidateNonNegativeInt();
 				int price = GetPriceForAge(age);
 				totalCost += price;
 			}
