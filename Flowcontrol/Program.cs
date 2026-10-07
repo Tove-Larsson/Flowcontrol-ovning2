@@ -17,17 +17,16 @@ namespace Flowcontrol
 
 		public static void MainMenu()
 		{
-
-			Console.WriteLine("\n===== Main menu =====");
-			Console.WriteLine("\nChoose an option by entering the corresponding number and pressing \"Enter\".");
-			Console.WriteLine("\n1. Youth or pensioner?");
-			Console.WriteLine("\n2. Calculate price for a group");
-			Console.WriteLine("\n0. Exit main menu");
-
 			bool running = true;
 
 			while (running)
 			{
+				Console.WriteLine("\n===== Main menu =====");
+				Console.WriteLine("\nChoose an option by entering the corresponding number and pressing \"Enter\".");
+				Console.WriteLine("\n1. Youth or pensioner?");
+				Console.WriteLine("\n2. Calculate price for a group");
+				Console.WriteLine("\n0. Exit main menu");
+
 				int actionTaken = int.Parse(Console.ReadLine());
 
 				switch (actionTaken)
@@ -82,6 +81,7 @@ namespace Flowcontrol
 			int groupSize = int.Parse(Console.ReadLine());
 			Console.WriteLine("\nPlease enter the age of every person in the group: ");
 
+			// Loop through the group and calculate the price for each person.
 			for (int i = 0; i < groupSize; i++)
 			{
 				Console.WriteLine("Enter age:");
@@ -94,7 +94,7 @@ namespace Flowcontrol
 			Console.WriteLine($"Total cost: {totalCost}kr");
 		}
 
-
+		// Returns the ticket price based on the person's age.
 		public static int GetPriceForAge(int age)
 		{
 			if (age < 20)
