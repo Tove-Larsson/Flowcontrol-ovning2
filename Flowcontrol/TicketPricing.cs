@@ -4,9 +4,9 @@ namespace Flowcontrol
 {
 	internal static class TicketPricing
 	{
-		const int youthPrice = 80;
-		const int pensionerPrice = 90;
-		const int standardPrice = 120;
+		const int YouthPrice = 80;
+		const int PensionerPrice = 90;
+		const int StandardPrice = 120;
 
 		public static void CheckAgeAndPrice()
 		{
@@ -16,17 +16,17 @@ namespace Flowcontrol
 
 			if (age < 20)
 			{
-				Console.WriteLine($"Youth price: {youthPrice}Kr");
+				Console.WriteLine($"Youth price: {YouthPrice}Kr");
 			}
 			else
 			{
 				if (age > 64)
 				{
-					Console.WriteLine($"Pensioner price: {pensionerPrice}Kr");
+					Console.WriteLine($"Pensioner price: {PensionerPrice}Kr");
 				}
 				else
 				{
-					Console.WriteLine($"Standard price: {standardPrice}Kr");
+					Console.WriteLine($"Standard price: {StandardPrice}Kr");
 				}
 			}
 		}
@@ -57,17 +57,17 @@ namespace Flowcontrol
 		{
 			if (age < 20)
 			{
-				return youthPrice;
+				return YouthPrice;
 			}
 			else
 			{
 				if (age > 64)
 				{
-					return pensionerPrice;
+					return PensionerPrice;
 				}
 				else
 				{
-					return standardPrice;
+					return StandardPrice;
 				}
 			}
 		}

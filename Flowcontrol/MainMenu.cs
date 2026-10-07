@@ -6,9 +6,9 @@ namespace Flowcontrol
 	{
 		public static void Show()
 		{
-			bool running = true;
+			bool isRunning = true;
 
-			while (running)
+			while (isRunning)
 			{
 				Console.WriteLine("\n===== Main menu =====");
 				Console.WriteLine("\nChoose an option by entering the corresponding number and pressing \"Enter\".");
@@ -23,7 +23,7 @@ namespace Flowcontrol
 				switch (actionTaken)
 				{
 					case 0:
-						running = false;
+						isRunning = false;
 						Console.WriteLine("You chose to exit the program, goodbye!");
 						break;
 					case 1:

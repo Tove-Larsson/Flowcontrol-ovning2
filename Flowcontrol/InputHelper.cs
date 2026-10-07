@@ -33,7 +33,7 @@ namespace Flowcontrol
 					return result;
 				}
 
-				Console.WriteLine($"\nYour age can not be a negative number, please try again.");
+				Console.WriteLine($"\nPlease enter a non-negative whole number.");
 			}
 		}
 
