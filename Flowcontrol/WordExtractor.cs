@@ -6,8 +6,19 @@ namespace Flowcontrol
 	{
 		public static void OutputThirdWord()
 		{
-			Console.WriteLine("Please write a sentence with at least 3 words: ");
-			var sentence = Console.ReadLine();
+			string sentence;
+			Console.WriteLine($"\nPlease write a sentence with at least 3 words: ");
+
+			// Keep asking until the user enters a sentence with at least three words.
+			while (true)
+			{
+				sentence = Console.ReadLine();
+
+				if (InputHelper.HasAtLeastThreeWords(sentence))
+				{
+					break;
+				}
+			}
 
 			// Split the sentence into individual words using spaces
 			var words = sentence.Split(' ');

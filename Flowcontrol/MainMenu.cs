@@ -18,7 +18,7 @@ namespace Flowcontrol
 				Console.WriteLine("\n4. The third word");
 				Console.WriteLine("\n0. Exit main menu");
 
-				int actionTaken = int.Parse(Console.ReadLine());
+				int actionTaken = InputHelper.ValidateInputIsInt();
 
 				switch (actionTaken)
 				{
