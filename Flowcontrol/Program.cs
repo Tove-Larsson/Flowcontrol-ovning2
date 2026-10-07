@@ -90,7 +90,8 @@ namespace Flowcontrol
 				totalCost += price;
 			}
 
-			Console.WriteLine(totalCost.ToString());
+			Console.WriteLine($"Number of people: {groupSize}");
+			Console.WriteLine($"Total cost: {totalCost}kr");
 		}
 
 
