@@ -25,6 +25,7 @@ namespace Flowcontrol
 				Console.WriteLine("\nChoose an option by entering the corresponding number and pressing \"Enter\".");
 				Console.WriteLine("\n1. Youth or pensioner?");
 				Console.WriteLine("\n2. Calculate price for a group");
+				Console.WriteLine("\n3. Repeat 10 times");
 				Console.WriteLine("\n0. Exit main menu");
 
 				int actionTaken = int.Parse(Console.ReadLine());
@@ -40,6 +41,9 @@ namespace Flowcontrol
 						break;
 					case 2:
 						CalculateGroupPrice();
+						break;
+					case 3:
+						RepeatTenTimes();
 						break;
 					default:
 						Console.WriteLine("Invalid input");
@@ -111,6 +115,17 @@ namespace Flowcontrol
 				{
 					return standardPrice;
 				}
+			}
+		}
+
+		public static void RepeatTenTimes()
+		{
+			Console.WriteLine("\nEnter any text you want to repeat 10 times: ");
+			string textInput = Console.ReadLine();
+
+			for (int i = 0; i < 10; i++)
+			{
+				Console.Write($"{i + 1}. {textInput} ");
 			}
 		}
 	}
