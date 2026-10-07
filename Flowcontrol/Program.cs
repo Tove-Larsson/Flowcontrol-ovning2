@@ -26,6 +26,7 @@ namespace Flowcontrol
 				Console.WriteLine("\n1. Youth or pensioner?");
 				Console.WriteLine("\n2. Calculate price for a group");
 				Console.WriteLine("\n3. Repeat 10 times");
+				Console.WriteLine("\n4. The third word");
 				Console.WriteLine("\n0. Exit main menu");
 
 				int actionTaken = int.Parse(Console.ReadLine());
@@ -44,6 +45,9 @@ namespace Flowcontrol
 						break;
 					case 3:
 						RepeatTenTimes();
+						break;
+					case 4:
+						OutputThirdWord();
 						break;
 					default:
 						Console.WriteLine("Invalid input");
@@ -128,5 +132,18 @@ namespace Flowcontrol
 				Console.Write($"{i + 1}. {textInput} ");
 			}
 		}
+
+		public static void OutputThirdWord()
+		{
+			Console.WriteLine("Please write a sentence with at least 3 words: ");
+			var sentence = Console.ReadLine();
+
+			// Split the sentence into individual words using spaces
+			var words = sentence.Split(' ');
+
+			Console.WriteLine(words[2]);
+
+		}
+
 	}
 }
